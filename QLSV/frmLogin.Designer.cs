@@ -65,6 +65,7 @@
             txtPassword.Size = new Size(265, 23);
             txtPassword.TabIndex = 9;
             txtPassword.Text = "123456";
+            txtPassword.KeyDown += txtPassword_KeyDown;
             // 
             // labelPassword
             // 
@@ -83,6 +84,7 @@
             txtUsername.Size = new Size(265, 23);
             txtUsername.TabIndex = 7;
             txtUsername.Text = "admin";
+            txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // labelUsername
             // 
@@ -104,6 +106,7 @@
             Controls.Add(labelPassword);
             Controls.Add(txtUsername);
             Controls.Add(labelUsername);
+            KeyPreview = true;
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmLogin";

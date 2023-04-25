@@ -50,5 +50,20 @@ namespace QLSV
         {
 
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Ngăn không cho phím Enter được nhập vào textbox
+                btnLogin_Click(sender, e); // Gọi hàm đăng nhập
+            }
+        }
+
     }
 }
